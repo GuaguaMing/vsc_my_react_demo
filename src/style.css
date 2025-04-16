@@ -1,0 +1,20 @@
+body{
+    background-color: antiquewhite;
+    display: flex;              /* 使 body 成為 flex 容器 */
+    justify-content: center;    /* 水平置中 */
+}
+#container {
+    width: 768px;
+    margin: 0auto;
+    padding: 20px;
+    background-color: aliceblue;
+    border: 1px solid red;      /* 輔助框 */
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.img {                  /* . 是 類別篩選器 / # 是 id篩選器 */
+    width: 100%;
+}

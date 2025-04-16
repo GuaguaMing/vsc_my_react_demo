@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片放大</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .img-containr {
+            display: flex;
+            gap: 10px;
+        }
+
+        .img-containr img {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .large-image {
+            margin-top: 20px;
+        }
+
+        .large-image img {
+            width: 300px;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 縮圖 -->
+        <div class="img-containr">
+            <img src="../assets/img0409/image-a.jpg" alt="縮圖1" onmouseover="showImage(0)" />
+            <img src="../assets/img0409/image-b.jpg" alt="縮圖2" onmouseover="showImage(1)" />
+        </div>
+
+        <!-- 放大圖 -->
+        <div class="large-image">
+            <img id="largeImage" src="../assets/img0409/image-a.jpg" alt="放大圖" />
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            '../assets/img0409/image-a.jpg', // 第一張圖片
+            '../assets/img0409/image-b.jpg'  // 第二張圖片
+        ];
+
+        function showImage(index) {
+            // 根據鼠標懸停的縮圖更新放大圖
+            const largeImage = document.getElementById("largeImage");
+            largeImage.src = images[index];
+        }
+    </script>
+</body>
+</html>
